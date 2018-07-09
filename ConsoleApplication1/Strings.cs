@@ -112,11 +112,11 @@ namespace ConsoleApplication1
         private static string ConvertToUpperCase(string userString)
         {
             string temp = string.Empty;
-            for (int i = 0; i < userString.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                int x = userString[i];
-                //char  val= userString[i] > 96 ? userString[i] - 32 : userString[i];
-                //temp += val;
+                int x = s[i] >= 97 ?s [i]-32 : s[i];
+                char character = (char)x;
+                temp += character.ToString();
             }
             return temp;
         }
