@@ -120,6 +120,23 @@ namespace ConsoleApplication1
             }
             return temp;
         }
+        
+        private static int returnLengthWithoutLengthFunction(string s)
+        {
+            int count = 0;
+            try
+            {
+                for (;;)
+                {
+                    char c = s[count];
+                    count++;
+                }
+            }
+            catch (Exception ex)
+            {
+                return count;
+            }
+        }
 
         private static string findFirstStringOccurence(string s1)
         {
