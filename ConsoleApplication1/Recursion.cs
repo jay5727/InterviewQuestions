@@ -5,8 +5,9 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine((new Recursion().digitToBinary(49)));
-            displayNumberWithoutForLoop(1);
+            //Console.WriteLine((new Recursion().digitToBinary(50)));
+            //displayNumberWithoutForLoop(1);
+            
         }
 
         //2^0 = 1//0
@@ -23,6 +24,8 @@ namespace ConsoleApplication1
             digitToBinary(digit / 2);
             return Strings.ReverseGivenString(val);
         }
+
+       
 
         //private String digitToBinary(int digit)
         //{

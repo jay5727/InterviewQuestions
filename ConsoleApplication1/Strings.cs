@@ -6,6 +6,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
 
+            Console.WriteLine(ConvertToLowerCase("JavaC#"));
+            Console.WriteLine(ConvertToUpperCase("Jay5727"));
             if (checkIfUserEnteredNumber("1234A"))
             {
                 Console.WriteLine("Number It is");
@@ -16,7 +18,7 @@ namespace ConsoleApplication1
             }
             reverseWordsInAString("ABC");
 
-            //Console.WriteLine(ConvertToUpperCase("Jay"));
+
 
             //if (findFirstStringOccurence("JAY"))
             //{
@@ -109,18 +111,32 @@ namespace ConsoleApplication1
             }
             return false;
         }
-        private static string ConvertToUpperCase(string userString)
+        private static string ConvertToUpperCase(string s)
         {
             string temp = string.Empty;
+            if (string.IsNullOrEmpty(s)) return null;
             for (int i = 0; i < s.Length; i++)
             {
-                int x = s[i] >= 97 ?s [i]-32 : s[i];
+                int x = s[i] >= 97 && s[i] <= 122 ? s[i] - 32 : s[i];
                 char character = (char)x;
                 temp += character.ToString();
             }
             return temp;
         }
-        
+
+        private static string ConvertToLowerCase(string s)
+        {
+            string temp = string.Empty;
+            if (string.IsNullOrEmpty(s)) return null;
+            for (int i = 0; i < s.Length; i++)
+            {
+                int x = s[i] >= 65 && s[i] <= 90 ? s[i] + 32 : s[i];
+                char character = (char)x;
+                temp += character.ToString();
+            }
+            return temp;
+        }
+
         private static int returnLengthWithoutLengthFunction(string s)
         {
             int count = 0;
