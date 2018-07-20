@@ -301,6 +301,41 @@ namespace ConsoleApplication1
             }
         }
 
+        /// <summary>
+        /// n=1
+        /// *
+        /// 
+        /// n=3
+        /// *##
+        /// #**
+        /// *##
+        /// 
+        /// n=5
+        /// *####
+        /// ###**
+        /// ***##
+        /// ###**
+        /// *####
+        /// 
+        /// n=8
+        ///* # # # # # # # //i=1
+        ///# # # # # # * *
+        ///* * * # # # # #
+        ///# # # # * * * * //i=4
+        ///* * * * # # # # //i=5
+        ///# # # # # * * *
+        ///* * # # # # # #
+        ///# # # # # # # *
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="n"></param>
         private static void learnToDrill(int n)
         {
             for (int i = 1; i <= n; i++)
@@ -311,18 +346,18 @@ namespace ConsoleApplication1
                 //
                 for (int j = 1; j <= n; j++)
                 {
-                    if (i <= (n/2)+1)//UPPER HALF
+                    if (i <= (n / 2) + 1)//UPPER HALF
                     {
-                        if(isRowOdd)
-                            Console.Write(i>=j? "* " :"# ");
+                        if (isRowOdd)
+                            Console.Write(i >= j ? "* " : "# ");
                         else
-                        Console.Write(j<=n - i ? "# " : "* ");
-                        
+                            Console.Write(j <= n - i ? "# " : "* ");
+
                     }
                     else//BOTTOM HALF
                     {
                         if (isRowOdd)
-                            Console.Write(i >=j ? "# " : "* ");
+                            Console.Write(i >= j ? "# " : "* ");
                         else
                             Console.Write(j <= n - i ? "* " : "#");
                     }
