@@ -182,7 +182,6 @@ namespace ConsoleApplication1
             {
                 //sum += (i % 2 != 0) ? x[i ] : 0;
                 sum += (x[i] > 0 && x[i] % 2 == 0) ? x[i] : 0;
-
             }
             return sum;
         }

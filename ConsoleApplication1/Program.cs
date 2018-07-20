@@ -7,6 +7,10 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
+
+          
+
+
             findIntOccurence();
             int x = 97825;
             string s = x.ToString();

@@ -6,13 +6,25 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            learnToDrill(8);
+            //int size = 4; int x = 1;
+            //for (int i = 1; i <= size; i++)
+            //{
+            //    for (int j = 1; j <= i; j++)
+            //    {
+            //        Console.Write(i % 2 != 0 ? Convert.ToChar(x + 64) + " " : x + " ");
+            //        x++;
+            //    }
+            //    Console.WriteLine();
+            //}
+
             //Triang();
             //Triangle();
-            print3(4);
-            print4();
-            print5();
-            print6();
-            print7(5);
+            //print3(4);
+            //print4();
+            //print5();
+            //print6();
+            //print7(5);
             //TriangleSunday();
             //myProgram();
             //myProgramM(7);
@@ -286,6 +298,36 @@ namespace ConsoleApplication1
                     Console.Write(c + " ");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        private static void learnToDrill(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                bool isRowOdd = i % 2 != 0;
+                //bool isEven = (i % 2 == 0);
+                //for (int j = isEven ? i : 1; isEven ? (j >= 1) : (j <= i); j = isEven ? (j -= 1) : (j += 1))
+                //
+                for (int j = 1; j <= n; j++)
+                {
+                    if (i <= (n/2)+1)//UPPER HALF
+                    {
+                        if(isRowOdd)
+                            Console.Write(i>=j? "* " :"# ");
+                        else
+                        Console.Write(j<=n - i ? "# " : "* ");
+                        
+                    }
+                    else//BOTTOM HALF
+                    {
+                        if (isRowOdd)
+                            Console.Write(i >=j ? "# " : "* ");
+                        else
+                            Console.Write(j <= n - i ? "* " : "#");
+                    }
+                }
+                Console.WriteLine("");
             }
         }
     }

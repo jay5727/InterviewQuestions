@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleApplication1.Program</StartupObject>
+    <StartupObject>ConsoleApplication1.Patterns</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
