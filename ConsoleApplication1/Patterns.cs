@@ -338,6 +338,7 @@ namespace ConsoleApplication1
         /// <param name="n"></param>
         private static void learnToDrill(int n)
         {
+            int medium = n / 2;
             for (int i = 1; i <= n; i++)
             {
                 bool isRowOdd = i % 2 != 0;
@@ -346,7 +347,7 @@ namespace ConsoleApplication1
                 //
                 for (int j = 1; j <= n; j++)
                 {
-                    if (i <= (n / 2) + 1)//UPPER HALF
+                    if (i <= (n / 2) )//UPPER HALF
                     {
                         if (isRowOdd)
                             Console.Write(i >= j ? "* " : "# ");
@@ -357,12 +358,43 @@ namespace ConsoleApplication1
                     else//BOTTOM HALF
                     {
                         if (isRowOdd)
-                            Console.Write(i >= j ? "# " : "* ");
+                            Console.Write(j <= n - i? "* " : "# ");
                         else
-                            Console.Write(j <= n - i ? "* " : "#");
+                            Console.Write(j <= i - 1 ? "# " : "*");
                     }
                 }
                 Console.WriteLine("");
+            }
+        }
+        
+        private static void AJAYsCode(int count)
+        {
+
+            for (int i = 0; i < count; i++)
+            {
+                string pattern = "";
+                string stars = "";
+                string hashes = "";
+                int medium = count / 2;
+                bool isRowEven = i % 2 == 0;
+
+                string result = new String('-', 5);
+
+                stars = stars.PadRight(isRowEven ? (i < medium ? i + 1 : count - i) : (i < medium ? count - i - 1 : i), isRowEven ? '*' : '#');
+                hashes = hashes.PadRight(isRowEven ? (i < medium ? count - i - 1 : i) : (i < medium ? i + 1 : count - i), isRowEven ? '#' : '*');
+
+                //if (i % 2 == 0)
+                //{
+                //    stars = stars.PadRight(i < medium ? i + 1 : count - i, '*');
+                //    hashes = hashes.PadRight(i < medium ? count - i - 1 : i, '#');
+                //}
+                //else
+                //{
+                //    stars = stars.PadRight(i < medium ? count - i - 1 : i, '#');
+                //    hashes = hashes.PadRight(i < medium ? i + 1 : count - i, '*');
+                //}
+                Console.WriteLine(stars + hashes);
+
             }
         }
     }
