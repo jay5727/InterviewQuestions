@@ -347,7 +347,7 @@ namespace ConsoleApplication1
                 //
                 for (int j = 1; j <= n; j++)
                 {
-                    if (i <= (n / 2) )//UPPER HALF
+                    if (i <= medium)//UPPER HALF
                     {
                         if (isRowOdd)
                             Console.Write(i >= j ? "* " : "# ");
