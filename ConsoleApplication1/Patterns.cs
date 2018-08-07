@@ -360,7 +360,7 @@ namespace ConsoleApplication1
                         if (isRowOdd)
                             Console.Write(j <= n - i? "* " : "# ");
                         else
-                            Console.Write(j <= i - 1 ? "# " : "*");
+                            Console.Write(j <= i - 1 ? "# " : "* ");
                     }
                 }
                 Console.WriteLine("");

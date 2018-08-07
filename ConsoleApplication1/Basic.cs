@@ -185,5 +185,12 @@ namespace ConsoleApplication1
             }
             return sum;
         }
+
+        //A destination is located at point x(x >0) of the coordinate line.
+        //In one step the robot can move 1,2,3,4 or 5 positions forward.
+        //Determine, what is the minimum number of steps the robot 
+        //need to make in order to get his destination.
+        //Sample i/p :5  o/p:1
+        //Sample i/p :12 o/p:3 
     }
 }
