@@ -350,15 +350,14 @@ namespace ConsoleApplication1
                     if (i <= medium)//UPPER HALF
                     {
                         if (isRowOdd)
-                            Console.Write(i >= j ? "* " : "# ");
+                            Console.Write(j<=i ? "* " : "# ");
                         else
                             Console.Write(j <= n - i ? "# " : "* ");
-
                     }
                     else//BOTTOM HALF
                     {
                         if (isRowOdd)
-                            Console.Write(j <= n - i? "* " : "# ");
+                            Console.Write(j <= n - i + 1 ? "* " : "# ");
                         else
                             Console.Write(j <= i - 1 ? "# " : "* ");
                     }
@@ -366,7 +365,7 @@ namespace ConsoleApplication1
                 Console.WriteLine("");
             }
         }
-        
+
         private static void AJAYsCode(int count)
         {
 
